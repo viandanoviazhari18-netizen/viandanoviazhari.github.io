@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Katalog Produk UMKM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    
+}
+
+body{
+    margin:0;
+    padding:30px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    min-height:100vh;
+}
+
+/* ===== JUDUL ===== */
+h1{
+    text-align:center;
+    color:white;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#e0e0e0;
+    margin-bottom:30px;
+}
+
+/* ===== BUTTON STOK ===== */
+.btn-stok{
+    display:inline-block;
+    padding:14px 26px;
+    background:linear-gradient(135deg,#00f2fe,#4facfe);
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 8px 25px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.btn-stok:hover{
+    transform:scale(1.05);
+}
+
+/* ===== GRID ===== */
+.katalog{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:white;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 45px rgba(0,0,0,.35);
+}
+
+.card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+/* ===== CONTENT ===== */
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    margin:0 0 8px;
+    font-size:18px;
+}
+
+.komposisi{
+    font-size:14px;
+    color:#555;
+    line-height:1.5;
+}
+
+.harga{
+    margin:12px 0;
+    font-size:20px;
+    font-weight:700;
+    color:#e91e63;
+}
+
+/* ===== BUTTON WA ===== */
+.btn-wa{
+    display:block;
+    text-align:center;
+    background:#25D366;
+    color:white;
+    padding:12px;
+    border-radius:12px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-wa:hover{
+    background:#1ebe5d;
+    box-shadow:0 10px 25px rgba(37,211,102,.6);
+}
+</style>
+</head>
+
+<body>
+
+<h1>✨ Katalog Produk Skincare Premium</h1>
+<p class="subtitle">Produk Mewah • Original • Berkualitas Tinggi</p>
+
+<div style="text-align:center;margin-bottom:35px;">
+    <a href="edit.html" class="btn-stok">📦 Lihat Stok Produk</a>
+</div>
+
+<div class="katalog">
+
+<!-- ===== PRODUK TETAP (TIDAK DIHAPUS) ===== -->
+
+<div class="card">
+<img src="serum sk II.jpg">
+<div class="card-content">
+<h3>SK-II Facial Treatment Essence</h3>
+<p class="komposisi">Pitera™ (fermentasi ragi kaya vitamin & asam amino) Hyaluronic acid hidrasi.</p>
+<p class="harga">Rp 2.699.520</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="serum cleude peau.jpg">
+<div class="card-content">
+<h3>Clé de Peau Beauté Farming Serum Supreme</h3>
+<p class="komposisi">Exclusive Illuminating Complex EX, peptida & antioksidan premium.</p>
+<p class="harga">Rp 7.550.000</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="sepaket.jpg">
+<div class="card-content">
+<h3>Transformation Pack Charette Cosmetic</h3>
+<p class="komposisi">Kombinasi bahan anti-aging intensif dengan AHA/BHA.</p>
+<p class="harga">Rp 9.279.431</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="paket2.jpg">
+<div class="card-content">
+<h3>Ultimate Skincare Vault</h3>
+<p class="komposisi">Serum, krim & essence kaya antioksidan.</p>
+<p class="harga">Rp 7.938.950</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="lotua.jpg">
+<div class="card-content">
+<h3>Latoua Mille Skincare Bundle</h3>
+<p class="komposisi">Ekstrak emas 24K untuk antioksidan & glow instan.</p>
+<p class="harga">Rp 4.218.000</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="lip lamer.jpg">
+<div class="card-content">
+<h3>La Mer The Lip Treatment</h3>
+<p class="komposisi">Miracle Broth™ fermentasi kelp laut.</p>
+<p class="harga">Rp 1.417.088</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="la praire.jpg">
+<div class="card-content">
+<h3>La Prairie Skin Caviar Luxe Cream</h3>
+<p class="komposisi">Ekstrak kaviar untuk lift & firm intensif.</p>
+<p class="harga">Rp 5.625.000</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="revive.jpg">
+<div class="card-content">
+<h3>Revive Peau Magnifique Youth Recruit Serum</h3>
+<p class="komposisi">Serum regenerasi untuk wajah & leher.</p>
+<p class="harga">Rp 4.268.000</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="serum dior.jpg">
+<div class="card-content">
+<h3>Christian Dior Capture Serum</h3>
+<p class="komposisi">Formula pencerah & anti-aging Dior.</p>
+<p class="harga">Rp 3.800.000</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="charlate.jpg">
+<div class="card-content">
+<h3>Transformation Pack Charette Cosmetics</h3>
+<p class="komposisi">Paket skincare premium anti-aging.</p>
+<p class="harga">Rp 9.279.000</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+<div class="card">
+<img src="darprint.jpg">
+<div class="card-content">
+<h3>Darphin Stimulskin Plus Renewal Lift Concentrate</h3>
+<p class="komposisi">Konsentrat lifting & elastisitas kulit.</p>
+<p class="harga">Rp 8.931.000</p>
+<a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">💬 Pesan WhatsApp</a>
+</div>
+</div>
+
+</div>
+<script>
+/* =============================
+   AMBIL DATA DARI STOK PRODUK
+   ============================= */
+const katalog = document.querySelector(".katalog");
+const dataStok = JSON.parse(localStorage.getItem("produk")) || [];
+
+dataStok.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+        <img src="${p.gambar}">
+        <div class="card-content">
+            <h3>${p.nama}</h3>
+            <p class="komposisi">${p.komposisi || "-"}</p>
+            <p class="harga">${p.harga}</p>
+            <a class="btn-wa" href="https://wa.me/6283128697888" target="_blank">
+                💬 Pesan WhatsApp
+            </a>
+        </div>
+    `;
+
+    katalog.appendChild(card);
+});
+</script>
+
+</body>
+</html>

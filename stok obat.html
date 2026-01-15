@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Stok Obat</title>
+<style>
+body{
+    font-family:Segoe UI;
+    background:#f4f6f8;
+    padding:20px;
+}
+h2{margin-bottom:10px}
+input,button{
+    padding:8px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+button{
+    background:#27ae60;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+button:hover{opacity:.9}
+table{
+    width:100%;
+    margin-top:15px;
+    border-collapse:collapse;
+    background:white;
+}
+th,td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+th{background:#27ae60;color:white}
+.edit{background:#3498db}
+.hapus{background:#e74c3c}
+</style>
+</head>
+<body>
+
+<h2>Manajemen Stok produk</h2>
+
+<input type="text" id="cari" placeholder="Cari produk..." onkeyup="cariproduk()">
+<button onclick="tambahproduk()">+ Tambah produk</button>
+
+<table id="tabel">
+<thead>
+<tr>
+<th>Nama</th>
+<th>Stok</th>
+<th>Harga</th>
+<th>Aksi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paracetamol</td>
+<td>100</td>
+<td>3000</td>
+<td>
+<button class="edit" onclick="editproduk(this)">Edit</button>
+<button class="hapus" onclick="hapusproduk(this)">Hapus</button>
+</td>
+</tr>
+</tbody>
+</table>
+
+<script>
+function tambahproduk(){
+    let nama = prompt("Nama barang:");
+    let stok = prompt("Jumlah stok:");
+    let harga = prompt("Harga:");
+
+    if(nama && stok && harga){
+        let row = tabel.insertRow();
+        row.innerHTML = `
+            <td>${nama}</td>
+            <td>${stok}</td>
+            <td>${harga}</td>
+            <td>
+                <button class="edit" onclick="editproduk(this)">Edit</button>
+                <button class="hapus" onclick="hapusproduk(this)">Hapus</button>
+            </td>`;
+    }
+}
+
+function editproduk(btn){
+    let row = btn.parentElement.parentElement;
+    let nama = prompt("Edit nama:", row.cells[0].innerText);
+    let stok = prompt("Edit stok:", row.cells[1].innerText);
+    let harga = prompt("Edit harga:", row.cells[2].innerText);
+
+    if(nama && stok && harga){
+        row.cells[0].innerText = nama;
+        row.cells[1].innerText = stok;
+        row.cells[2].innerText = harga;
+    }
+}
+
+function hapusproduk(btn){
+    if(confirm("Hapus produk ini?")){
+        btn.parentElement.parentElement.remove();
+    }
+}
+
+function cariproduk(){
+    let input = document.getElementById("cari").value.toLowerCase();
+    let rows = document.querySelectorAll("#tabel tbody tr");
+
+    rows.forEach(row=>{
+        let nama = row.cells[0].innerText.toLowerCase();
+        row.style.display = nama.includes(input) ? "" : "none";
+    });
+}
+</script>
+
+</body>
+</html>
